@@ -1,0 +1,28 @@
+
+ 
+INSTALL THE FOLLOWING IF NOT AVAILABLE
+
+sudo apt-get install build-essential libcurl4-openssl-dev libxml2-dev pkg-config libssl-dev libfuse-dev m4 automake autotools-dev s3fs libtool libgsl-dev libconfuse-dev  zlib1g-dev
+
+GO TO THE FOLDER  "TRISURF_TUTORIAL"   
+
+aclocal
+autoheader
+automake-ac   
+autoconf
+autoreconf -if
+libtoolize --force
+automake-ac
+./configure
+
+GO TO THE /SRC FOLDER
+
+go to /src (or after make)
+make
+sudo make install
+sudo ldconfig
+
+TO RUN, COPY THE FILE 'TAPE' TO SOME OTHER LOCATION, EDIT THE PARAMETERS YOU WANT TO RUN
+
+trisurf --f
+
